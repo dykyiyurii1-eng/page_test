@@ -3,13 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>TEst page</title>
-    
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+     <link rel="stylesheet" href="style.css">
+    <title>Test page</title>
+    <style>
+        .swiper { width: 100%; height: 400px; }
+        .swiper-slide video { width: 100%; height: 100%; object-fit: cover; }
+    </style>
 </head>
 <body>
-    <div class="test">
-        <hi>hello world</hi>
+
+<div class="test">
+    <h1>hello world</h1>
+</div>
+
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <video src="https://videos.pexels.com/video-files/856982/856982-hd_1920_1080_25fps.mp4"
+                   muted autoplay loop playsinline></video>
+        </div>
+        <div class="swiper-slide">
+            <video src="https://videos.pexels.com/video-files/856982/856982-hd_1920_1080_25fps.mp4"
+                   muted autoplay loop playsinline></video>
+        </div>
+        <div class="swiper-slide">
+            <video src="https://videos.pexels.com/video-files/856975/856975-hd_1920_1080_25fps.mp4"
+                   muted autoplay loop playsinline></video>
+        </div>
     </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+  spaceBetween: 10,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+},
+        direction: 'horizontal',
+        autoplay:{
+            delay:3000
+        },
+        loop: true,
+        pagination: { el: '.swiper-pagination' },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+
 </body>
 </html>

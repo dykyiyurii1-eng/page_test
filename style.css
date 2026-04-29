@@ -7,3 +7,28 @@
     text-align: center;
     margin-top: 10px;
 }
+
+.swiper{
+    max-width: 600px;
+    height: 350px;
+    margin-top: 20px;
+
+}
+.swiper video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.swiper-button-next, .swiper-button-prev, .swiper-button-next, .swiper-button-prev {
+        margin-left: 0;
+        color: black;
+        margin-top: calc(0px - var(--swiper-navigation-size) / 2);
+        top: var(--swiper-navigation-top-offset, 50%);
+
+
+    }
+
+.swiper-pagination-bullet-active{
+    background-color: black;
+}
